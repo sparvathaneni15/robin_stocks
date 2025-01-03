@@ -2,7 +2,7 @@ import robin_stocks
 from robin_stocks import *
 import robin_stocks.robinhood as r
 import pyotp # type: ignore
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt # type: ignore
 import os
 from dotenv import load_dotenv # type: ignore
 
