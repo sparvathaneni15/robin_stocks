@@ -10,7 +10,7 @@ load_dotenv()
 totp = pyotp.TOTP(os.environ["robin_mfa"]).now()
 
 login = r.login(os.environ["robin_username"], os.environ["robin_password"], mfa_code=totp)
+my_stocks = r.build_holdings(account_number=os.environ["tira_account_number"])
 
-my_stocks = r.build_holdings()
 for key, value in my_stocks.items():
     print(key, value)

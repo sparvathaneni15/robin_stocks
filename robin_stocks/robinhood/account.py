@@ -749,7 +749,7 @@ def delete_symbols_from_watchlist(inputSymbols, name="My First List"):
 
 
 @login_required
-def build_holdings(with_dividends=False):
+def build_holdings(with_dividends=False, account_number=None):
     """Builds a dictionary of important information regarding the stocks and positions owned by the user.
 
     :param with_dividends: True if you want to include divident information.
@@ -759,7 +759,7 @@ def build_holdings(with_dividends=False):
     percentage of portfolio, and average buy price.
 
     """
-    positions_data = get_open_stock_positions()
+    positions_data = get_open_stock_positions(account_number=account_number)
     portfolios_data = load_portfolio_profile()
     accounts_data = load_account_profile()
 
