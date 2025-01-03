@@ -2,7 +2,7 @@
 """
 from functools import wraps
 
-import requests
+import requests # type: ignore
 from robin_stocks.robinhood.globals import LOGGED_IN, OUTPUT, SESSION
 
 

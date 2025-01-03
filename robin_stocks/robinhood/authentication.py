@@ -240,8 +240,8 @@ def _validate_sherrif_id(device_token:str, workflow_id:str,mfa_code:str):
 
 def _get_sherrif_challenge(token_id:str):
     
-    if "id" in data:
-        return data["id"]
+    if "id" in data: # type: ignore
+        return data["id"] # type: ignore
     raise Exception("Id not returned in user-machine call")
 
 
