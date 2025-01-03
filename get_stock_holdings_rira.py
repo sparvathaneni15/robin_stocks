@@ -1,9 +1,9 @@
 import robin_stocks
 from robin_stocks import *
 import robin_stocks.robinhood as r
-import pyotp
+import pyotp # type: ignore
 import os
-from dotenv import load_dotenv
+from dotenv import load_dotenv # type: ignore
 
 load_dotenv()
 
